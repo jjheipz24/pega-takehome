@@ -1,0 +1,11 @@
+.navItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #dfdfdf;
+  margin: 1em 2em;
+}
+
+.navItem i {
+  margin-right: 1em;
+}
