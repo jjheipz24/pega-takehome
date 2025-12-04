@@ -19,7 +19,7 @@ export const NavCreate = ({ isNavOpen }: { isNavOpen: boolean }) => {
   }, [isNavOpen, isSubmenuOpen]);
 
   return (
-    <li className={styles.createMenu}>
+    <li className={`${styles.createMenu} ${isNavOpen ? styles.navOpen : ''}`}>
       <button
         className={navItemsStyles.navItem}
         onClick={() => setIsSubmenuOpen(!isSubmenuOpen)}

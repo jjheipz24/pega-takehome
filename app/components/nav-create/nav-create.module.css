@@ -3,6 +3,10 @@
   list-style: none;
 }
 
+.navOpen {
+  margin-left: 2.5em;
+}
+
 .createMenu button {
   display: flex;
   flex-direction: row;
@@ -25,7 +29,7 @@
 
 .submenu {
   padding: 0;
-  margin-left: -2em;
+  margin-left: -2.5em;
   margin-top: 0.5em;
   width: calc(100% + 4em);
   background-color: #444;
