@@ -35,3 +35,9 @@
   color: #dfdfdf;
   padding: 0.5em 4em;
 }
+
+.submenuItem a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+}
