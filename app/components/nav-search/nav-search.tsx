@@ -14,6 +14,7 @@ export const NavSearch = ({ isNavOpen }: { isNavOpen: boolean }) => {
             type='text'
             placeholder='Search...'
             className={styles.searchInput}
+            aria-label='Search'
           />
         </>
       ) : (

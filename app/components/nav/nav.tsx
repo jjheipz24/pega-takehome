@@ -29,6 +29,8 @@ export const Nav = () => {
       className={`${styles.container} ${isNavOpen ? styles.open : styles.closed}`}
       onMouseEnter={() => setIsNavOpen(true)}
       onMouseLeave={() => setIsNavOpen(false)}
+      onFocus={() => setIsNavOpen(true)}
+      onBlur={() => setIsNavOpen(false)}
     >
       <div className={styles.navHeader}>
         <img src={pegaLogo} alt='Pega' className={styles.logo} />
