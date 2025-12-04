@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import styles from './nav.module.css';
 import pegaLogo from '../../assets/images/pega.png';
 import NavSearch from '../nav-search/nav-search';
@@ -5,6 +6,8 @@ import Create from '../nav-create/nav-create';
 import NavItems from '../nav-items/nav-items';
 
 export const Nav = () => {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
   const navItems = [
     { path: '/', label: 'Home', icon: 'fa-solid fa-house' },
     { path: '/', label: 'My Dashboard', icon: 'fa-solid fa-table-columns' },
@@ -20,18 +23,23 @@ export const Nav = () => {
     { path: '/', label: 'Recents', icon: 'fa-solid fa-clock-rotate-left' },
     { path: '/', label: 'User', icon: 'fa-solid fa-user' },
   ];
+
   return (
-    <nav className={styles.container}>
+    <nav
+      className={`${styles.container} ${isNavOpen ? styles.open : styles.closed}`}
+      onMouseEnter={() => setIsNavOpen(true)}
+      onMouseLeave={() => setIsNavOpen(false)}
+    >
       <div className={styles.navHeader}>
         <img src={pegaLogo} alt='Pega' className={styles.logo} />
-        <span className={styles.navTitle}>Demo</span>
+        {isNavOpen && <span className={styles.navTitle}>Technical Demo</span>}
       </div>
-      <NavSearch />
-      <Create />
-      <NavItems navItems={navItems} />
+      <NavSearch isNavOpen={isNavOpen} />
+      <Create isNavOpen={isNavOpen} />
+      <NavItems navItems={navItems} isNavOpen={isNavOpen} />
       <div className={styles.navFooter}>
         <span className={styles.divider}></span>
-        <NavItems navItems={navFooterItems} />
+        <NavItems navItems={navFooterItems} isNavOpen={isNavOpen} />
       </div>
     </nav>
   );

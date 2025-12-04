@@ -6,4 +6,5 @@ export interface NavItemProps {
 
 export interface NavItemListProps {
   navItems: NavItemProps[];
+  isNavOpen: boolean;
 }

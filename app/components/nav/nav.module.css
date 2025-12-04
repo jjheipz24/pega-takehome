@@ -5,9 +5,39 @@
   top: 0;
   left: 0;
   height: 100vh;
-  width: 375px;
   background-color: #292929;
   z-index: 1000;
+  overflow: hidden;
+  transition: width 0.3s ease;
+}
+
+.open {
+  width: 375px;
+}
+
+.closed {
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+}
+
+.navHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5em 0;
+}
+
+.logo {
+  max-width: 80px;
+  height: 56px;
+}
+
+.navTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
 }
 
 .divider {
@@ -19,25 +49,6 @@
   border: none;
 }
 
-.logo {
-  max-width: 80px;
-  height: 56px;
-}
-
 .navFooter {
   margin-top: auto;
-}
-
-.navHeader {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: 0.5em 0;
-}
-
-.navTitle {
-  font-size: 18px;
-  font-weight: 600;
-  color: #fff;
 }

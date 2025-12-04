@@ -10,7 +10,7 @@ export function meta({}: Route.MetaArgs) {
 export default function Epics() {
   return (
     <main>
-      <h1>Epics</h1>
+      <h1>Epics Page</h1>
     </main>
   );
 }

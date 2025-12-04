@@ -6,6 +6,6 @@
   margin: 1em 2em;
 }
 
-.navItem i {
-  margin-right: 1em;
+.navItemLabel {
+  margin-left: 1em;
 }

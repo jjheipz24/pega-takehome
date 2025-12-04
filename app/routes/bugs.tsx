@@ -10,7 +10,7 @@ export function meta({}: Route.MetaArgs) {
 export default function Bugs() {
   return (
     <main>
-      <h1>Bugs</h1>
+      <h1>Bugs Page</h1>
     </main>
   );
 }
